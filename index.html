@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><link rel="icon" href="favicon.ico"><title>璇玑智能采购系统</title><script>window.BASE_URL = 'http://www.shuiyue.info:20000';
+    document.addEventListener('plusready', function () {
+      window.plus.navigator.setStatusBarBackground('#F4F8FB');
+    })
+    window.setStateBg = function (color) {
+      window.plus.navigator.setStatusBarBackground(color);
+      var time, i = 0;
+      window.plus.key.addEventListener('backbutton', function () {
+        if (location.hash !== '#/home') {
+          window.history.go(-1);
+        } else {
+          if (i === 0) {
+            window.plus.nativeUI.toast('是否要退出系统？');
+            ++i;
+            time = setTimeout(() => {
+              i = 0;
+              clearTimeout(time);
+              time = undefined;
+            }, 2000)
+          } else {
+            window.plus.runtime.quit();
+          }
+        }
+      });
+    }</script><link href="css/chunk-01447153.d12dd6b3.css" rel="prefetch"><link href="css/chunk-158ffbff.429284e7.css" rel="prefetch"><link href="css/chunk-2823916e.2d505581.css" rel="prefetch"><link href="css/chunk-2d40a7bb.05904131.css" rel="prefetch"><link href="css/chunk-48e47820.3b2501eb.css" rel="prefetch"><link href="css/chunk-56ab7308.a22f0610.css" rel="prefetch"><link href="css/chunk-7c4262b4.c073986e.css" rel="prefetch"><link href="css/chunk-ac6c93c4.f8929427.css" rel="prefetch"><link href="css/chunk-b5f0f3c8.0df23a13.css" rel="prefetch"><link href="js/chunk-01447153.e3a36ff2.js" rel="prefetch"><link href="js/chunk-12beb522.5bdb53a2.js" rel="prefetch"><link href="js/chunk-131e9c8c.4256831c.js" rel="prefetch"><link href="js/chunk-158ffbff.466c30b3.js" rel="prefetch"><link href="js/chunk-2823916e.8ed4c20b.js" rel="prefetch"><link href="js/chunk-2d0d3721.8ac719a2.js" rel="prefetch"><link href="js/chunk-2d0e8e0c.e5a7985b.js" rel="prefetch"><link href="js/chunk-2d40a7bb.fc27afff.js" rel="prefetch"><link href="js/chunk-48e47820.1379f1ef.js" rel="prefetch"><link href="js/chunk-555766e8.13ef1173.js" rel="prefetch"><link href="js/chunk-56ab7308.696a784e.js" rel="prefetch"><link href="js/chunk-5c3214d2.9d91767d.js" rel="prefetch"><link href="js/chunk-6a5e95a3.4fbb6747.js" rel="prefetch"><link href="js/chunk-7aa00c51.4cd1b585.js" rel="prefetch"><link href="js/chunk-7c4262b4.d10ae03e.js" rel="prefetch"><link href="js/chunk-90bceebe.dc6fc337.js" rel="prefetch"><link href="js/chunk-ac6c93c4.f8fd9513.js" rel="prefetch"><link href="js/chunk-b42b0ba0.c0665b24.js" rel="prefetch"><link href="js/chunk-b5f0f3c8.500f005a.js" rel="prefetch"><link href="js/chunk-c6fafa1e.a35dd648.js" rel="prefetch"><link href="css/app.c9800f60.css" rel="preload" as="style"><link href="css/chunk-vendors.331f546b.css" rel="preload" as="style"><link href="js/app.63f93d91.js" rel="preload" as="script"><link href="js/chunk-vendors.e4cf3699.js" rel="preload" as="script"><link href="css/chunk-vendors.331f546b.css" rel="stylesheet"><link href="css/app.c9800f60.css" rel="stylesheet"></head><body><div id="root"></div><script src="js/chunk-vendors.e4cf3699.js"></script><script src="js/app.63f93d91.js"></script></body></html>
